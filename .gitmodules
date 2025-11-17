@@ -1,0 +1,6 @@
+[submodule "foundations/forks/javascript-exercises"]
+	path = foundations/forks/javascript-exercises
+	url = https://github.com/copyface/javascript-exercises
+[submodule "foundations/forks/JavaScript30"]
+	path = foundations/forks/JavaScript30
+	url = https://github.com/copyface/JavaScript30
