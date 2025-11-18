@@ -2,6 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    color: #363636;
 }
 
 body {
@@ -30,6 +31,18 @@ body {
     height: 100%;
     border-radius: 5px;
     background-color: floralwhite;
+    position: relative;
+}
+
+.answer {
+    direction: rtl;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.answer--history {
+    color: grey;
 }
 
 .buttons__wrapper {
@@ -63,9 +76,10 @@ button {
     border-radius: 3px;
     border: none;
     transition: transform 0.1s ease-in-out;
+    cursor: pointer;
 }
 
-.buttons__item--operator {
+.buttons__item--operator, #equals {
     background-color: #e3b361;
 }
 
@@ -74,17 +88,12 @@ button {
     background-color: #363636;
 }
 
-#delete {
-    background-color: #a78241;
-}
-
-#clear {
+.buttons__item--remove {
     background-color: #a78241;
 }
 
 #equals {
     flex-grow: 1;
-    background-color: #e3b361;
 }
 
 /*animations*/
