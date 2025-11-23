@@ -35,7 +35,7 @@ body {
 }
 
 .answer {
-    direction: rtl;
+
     position: absolute;
     bottom: 5px;
     right: 10px;
@@ -79,7 +79,7 @@ button {
     cursor: pointer;
 }
 
-.buttons__item--operator, #equals {
+.buttons__item--operator {
     background-color: #e3b361;
 }
 
@@ -94,6 +94,10 @@ button {
 
 #equals {
     flex-grow: 1;
+}
+
+#dot {
+    background-color: white;
 }
 
 /*animations*/

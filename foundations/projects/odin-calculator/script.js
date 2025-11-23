@@ -4,49 +4,59 @@ let current = "";
 
 // elements
 const button = document.querySelector(".buttons");
-const currentNumber = document.querySelector("#current");
-const historyNumber = document.querySelector("#history");
-
-
+const currentValue = document.querySelector("#current");
+const historyValue = document.querySelector("#history");
 
 // events
-button.addEventListener('click', (e) => {
+button.addEventListener("click", (e) => {
   const value = e.target;
+  current = value.value;
 
-  if (value.matches('.buttons__item--operand')) {
-    current = value.value;
-    if (currentNumber.textContent === '0') {
-      currentNumber.textContent = current;
+  if (value.matches(".buttons__item--operand")) {
+    if (currentValue.textContent === "0") {
+      currentValue.textContent = current;
     } else {
-      currentNumber.textContent += current;
+      currentValue.textContent += current;
     }
   } else if (value.matches(".buttons__item--operator")) {
-    console.log(value.value);
+    if (value.matches("#dot")) {
+      const isDot = checkForDot(currentValue.textContent);
+      if (isDot === true) {
+        current = "";
+      } else {
+        currentValue.textContent += current;
+      }
+    } else {
+      currentValue.textContent += current;
+    }
   } else if (value.matches("#delete")) {
-    currentNumber.textContent
+    if (currentValue.textContent === "0") {
+      return;
+    } else if (currentValue.textContent.length === 1) {
+      currentValue.textContent = "0";
+      return;
+    }
+    let lenght = currentValue.textContent.length - 1;
+    currentValue.textContent = currentValue.textContent.slice(0, lenght);
   } else if (value.matches("#clear")) {
-    console.log(value.value);
+    currentValue.textContent = "0";
   } else if (value.matches("#equals")) {
     console.log(value.value);
   }
-
 });
 
-
+// dot
+function checkForDot(value) {
+  return value.includes('.');
+}
 
 // operator functions
-function add() {
+function add() {}
 
-}
+function subtruct() {}
 
-function subtruct() {
+function multiply() {}
 
-}
+function divide() {}
 
-function multiply() {
-
-}
-
-function divide() {
-
-}
+function operate() {}
