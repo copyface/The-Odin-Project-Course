@@ -1,175 +1,176 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <script src="script.js" defer></script>
-        <title>Calculator</title>
-    </head>
-    <body>
-        <div class="container">
-            <!--screen display-->
-            <div class="display">
-                <div class="answer">
-                    <h2 id="history" class="answer--history"></h2>
-                    <h1 id="current" class="answer--current">0</h1>
-                </div>
-            </div>
-
-            <!--buttons-->
-            <div class="buttons">
-                <!--top-->
-                <div class="buttons__wrapper buttons__wrapper--top">
-                    <button
-                        id="add"
-                        class="buttons__item buttons__item--operator"
-                        value="+"
-                        type="buttons"
-                    >
-                        +
-                    </button>
-                    <button
-                        id="subtract"
-                        class="buttons__item buttons__item--operator"
-                        value="-"
-                        type="button"
-                    >
-                        -
-                    </button>
-                    <button
-                        id="multiply"
-                        class="buttons__item buttons__item--operator"
-                        value="*"
-                        type="button"
-                    >
-                        x
-                    </button>
-                    <button
-                        id="divide"
-                        class="buttons__item buttons__item--operator"
-                        value="/"
-                        type="button"
-                    >
-                        /
-                    </button>
-                </div>
-
-                <!--left-->
-                <div class="buttons__wrapper buttons__wrapper--left">
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="9"
-                        type="button"
-                    >
-                        9
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="8"
-                        type="button"
-                    >
-                        8
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="7"
-                        type="button"
-                    >
-                        7
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="6"
-                        type="button"
-                    >
-                        6
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="5"
-                        type="button"
-                    >
-                        5
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="4"
-                        type="button"
-                    >
-                        4
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="3"
-                        type="button"
-                    >
-                        3
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="2"
-                        type="button"
-                    >
-                        2
-                    </button>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="1"
-                        type="button"
-                    >
-                        1
-                    </button>
-                    <a href="https://www.theodinproject.com/" target="_blank">
-                        <button id="logo" class="buttons__item" type="button">
-                            <img src="images/logo.svg" alt="Logo" />
-                        </button>
-                    </a>
-                    <button
-                        class="buttons__item buttons__item--operand"
-                        value="0"
-                        type="button"
-                    >
-                        0
-                    </button>
-                    <button
-                        id="dot"
-                        class="buttons__item buttons__item--operator"
-                        value="."
-                        type="button"
-                    >
-                        .
-                    </button>
-                </div>
-
-                <!--right-->
-                <div class="buttons__wrapper buttons__wrapper--right">
-                    <button
-                        id="delete"
-                        class="buttons__item buttons__item--remove"
-                        value="del"
-                        type="button"
-                    >
-                        D
-                    </button>
-                    <button
-                        id="clear"
-                        class="buttons__item buttons__item--remove"
-                        value="clr"
-                        type="button"
-                    >
-                        C
-                    </button>
-                    <button
-                        id="equals"
-                        class="buttons__item buttons__item--operator"
-                        value="="
-                        type="button"
-                    >
-                        =
-                    </button>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="test.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <!--screen display-->
+      <div class="display">
+        <div class="answer">
+          <h2 id="history" class="answer--history"></h2>
+          <h1 id="current" class="answer--current">0</h1>
         </div>
-    </body>
+      </div>
+
+      <!--buttons-->
+      <div class="buttons">
+        <!--top-->
+        <div class="buttons__wrapper buttons__wrapper--top">
+          <button
+            id="add"
+            class="buttons__item buttons__item--operator"
+            value="+"
+            type="buttons"
+          >
+            +
+          </button>
+          <button
+            id="subtract"
+            class="buttons__item buttons__item--operator"
+            value="-"
+            type="button"
+          >
+            -
+          </button>
+          <button
+            id="multiply"
+            class="buttons__item buttons__item--operator"
+            value="*"
+            type="button"
+          >
+            x
+          </button>
+          <button
+            id="divide"
+            class="buttons__item buttons__item--operator"
+            value="/"
+            type="button"
+          >
+            /
+          </button>
+        </div>
+
+        <!--left-->
+        <div class="buttons__wrapper buttons__wrapper--left">
+          <button
+            class="buttons__item buttons__item--operand"
+            value="9"
+            type="button"
+          >
+            9
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="8"
+            type="button"
+          >
+            8
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="7"
+            type="button"
+          >
+            7
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="6"
+            type="button"
+          >
+            6
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="5"
+            type="button"
+          >
+            5
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="4"
+            type="button"
+          >
+            4
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="3"
+            type="button"
+          >
+            3
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="2"
+            type="button"
+          >
+            2
+          </button>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="1"
+            type="button"
+          >
+            1
+          </button>
+          <a href="https://www.theodinproject.com/" target="_blank">
+            <button id="logo" class="buttons__item" type="button">
+              <img src="images/logo.svg" alt="Logo" />
+            </button>
+          </a>
+          <button
+            class="buttons__item buttons__item--operand"
+            value="0"
+            type="button"
+          >
+            0
+          </button>
+          <button
+            id="dot"
+            class="buttons__item buttons__item--operator"
+            value="."
+            type="button"
+          >
+            .
+          </button>
+        </div>
+
+        <!--right-->
+        <div class="buttons__wrapper buttons__wrapper--right">
+          <button
+            id="delete"
+            class="buttons__item buttons__item--remove"
+            value="del"
+            type="button"
+          >
+            D
+          </button>
+          <button
+            id="clear"
+            class="buttons__item buttons__item--remove"
+            value="clr"
+            type="button"
+          >
+            C
+          </button>
+          <button
+            id="equals"
+            class="buttons__item buttons__item--operator"
+            value="="
+            type="button"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

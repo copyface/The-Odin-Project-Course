@@ -1,6 +1,10 @@
 // variables
 let history = null;
-let current = "";
+let current = 0;
+let operandA = 0;
+let operandB = 0;
+let operator = "";
+const operators = /[+\-*/]/;
 
 // elements
 const button = document.querySelector(".buttons");
@@ -11,7 +15,6 @@ const historyValue = document.querySelector("#history");
 button.addEventListener("click", (e) => {
   const value = e.target;
   current = value.value;
-
   if (value.matches(".buttons__item--operand")) {
     if (currentValue.textContent === "0") {
       currentValue.textContent = current;
@@ -19,44 +22,48 @@ button.addEventListener("click", (e) => {
       currentValue.textContent += current;
     }
   } else if (value.matches(".buttons__item--operator")) {
-    if (value.matches("#dot")) {
-      const isDot = checkForDot(currentValue.textContent);
-      if (isDot === true) {
-        current = "";
-      } else {
-        currentValue.textContent += current;
-      }
-    } else {
-      currentValue.textContent += current;
-    }
-  } else if (value.matches("#delete")) {
-    if (currentValue.textContent === "0") {
-      return;
-    } else if (currentValue.textContent.length === 1) {
-      currentValue.textContent = "0";
+    operator = current;
+    // check for consecutive decimals
+    if (checkConsecutiveDecimal(currentValue.textContent)) {
       return;
     }
-    let lenght = currentValue.textContent.length - 1;
-    currentValue.textContent = currentValue.textContent.slice(0, lenght);
-  } else if (value.matches("#clear")) {
-    currentValue.textContent = "0";
-  } else if (value.matches("#equals")) {
-    console.log(value.value);
+    // check for consecutive operators
+    // if (checkConsecutiveOperator(currentValue.textContent, operators)) {
+    //   currentValue.textContent.slice(currentValue.textContent.length - 1, -1);
+    //   currentValue.textContent += operator;
+    //   return;
+    // } else {
+    //   console.log(operator);
+    //   currentValue.textContent += operator;
+    // }
+    currentValue.textContent += current;
   }
 });
 
 // dot
-function checkForDot(value) {
-  return value.includes('.');
+function checkConsecutiveDecimal(value) {
+  return value.includes(".");
+}
+
+function checkConsecutiveOperator(math, charsToFind) {
+  return charsToFind.test(math);
 }
 
 // operator functions
-function add() {}
+function add(a, b) {
+  return a + b;
+}
 
-function subtruct() {}
+function subtract(a, b) {
+  return a - b;
+}
 
-function multiply() {}
+function multiply(a, b) {
+  return a * b;
+}
 
-function divide() {}
+function divide(a, b) {
+  return a / b;
+}
 
 function operate() {}
